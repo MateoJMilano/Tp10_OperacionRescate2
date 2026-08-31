@@ -1,7 +1,7 @@
 const { users } = require("../data/db");
 
 function getProfile(req, res) {
-  const user = users.find((u) => u.id === req.user.id);
+  const user = users.find((u) => u.id == req.param.id); //ULTIMO CAMBIO HASTA EL MOMENTO
 
   if (!user) {
     return res.status(404).json({ message: "Usuario no encontrado" });
