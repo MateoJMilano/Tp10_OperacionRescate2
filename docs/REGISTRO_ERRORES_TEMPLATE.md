@@ -8,7 +8,10 @@ Completar una fila por cada error detectado.
 | 2 | src/app.js | Fallaba la lectura del body de postman | Prueba manual de ruta protegida | Agregado del uso de express.json() |
 | 3 | src/utils/token.js | la funcion SignToken no devolvia nada | Prueba en postman | reescritura del exports |
 | 4 | src/data/db.js | Existia "users" como una constante con un unico usuario | seguimiento de ruta | pasar "users" a una no constante |
-| 5 | src/controllers/userController.js | el users.find para el get de usuarios estaba mal escrito | revision manual de codigo | reescritura de codigo|
+| 5 | src/controllers/userController.js | el users.find para el get de usuarios estaba mal escrito, además de el req.body | revision manual de codigo | reescritura de codigo: "const user = users.find((u) => u.id == req.body.id);"|
+| 6 | src/controllers/userController.js | codigo mal escrito, : user.id no existe, además de que faltaba un .id en un request | lectura manual de código | agregar el .id y cambiar el user.is a params.id |
+| 6 | src/controllers/userController.js | codigo mal escrito, : estaba la variable name declarada como un array, además de que faltaba un .id en un request | lectura manual de código | agregar el .id y sacar las llaves |
+
 
 ## Guia de calidad para el informe
 
